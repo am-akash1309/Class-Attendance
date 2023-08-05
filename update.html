@@ -1,0 +1,100 @@
+<div ng-init="assignCpBasedOnTime()">
+    <div class="row">
+        <div class="col l8 m10 s12 offset-l2 offset-m1">
+            <div class="card" ng-show="updatePagePreloader_Submit">
+                <div class="card-content white-text">
+                    <input type="text" class="datepicker card-title center" ng-model="date">
+                </div>
+                <div>
+                    <div ng-show="cp==1">Period 1: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==2">Period 2: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==3">Period 3: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==4">Period 4: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==5">Period 5: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==6">Period 6: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==7">Period 7: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div>
+                    <div ng-show="cp==8">Period 8: <input type="text" ng-model="absentees"></div>
+                </div>
+                <div class="row">
+                    <a class="btn center" ng-click="submit()">Submit</a>
+                </div>
+            </div>
+            <div class="preloader-wrapper small active center" ng-hide="updatePagePreloader_Submit">
+                <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+          
+                <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+          
+                <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+          
+                <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a class='dropdown-trigger btn center' data-target='dropdown1' target="_blank">Change Period</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a class="btn center" ng-click="gotohome()">Home</a>
+        </div>
+    </div>
+
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a ng-click="changeperiod(1)">1</a></li>
+        <li><a ng-click="changeperiod(2)">2</a></li>
+        <li><a ng-click="changeperiod(3)">3</a></li>
+        <li><a ng-click="changeperiod(4)">4</a></li>
+        <li><a ng-click="changeperiod(5)">5</a></li>
+        <li><a ng-click="changeperiod(6)">6</a></li>
+        <li><a ng-click="changeperiod(7)">7</a></li>
+        <li><a ng-click="changeperiod(8)">8</a></li>
+      </ul>
+</div>
