@@ -156,12 +156,12 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
 
     $scope.changeperiod = (num) => {
         $scope.cp = num
-        await getexcisting()
+        getexcisting()
     }
 
     $scope.init = () => {
-        await assignCpBasedOnTime()
-        await getexcisting()
+        assignCpBasedOnTime()
+        getexcisting()
     }
 
     $scope.gotohome = () => {
