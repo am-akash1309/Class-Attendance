@@ -132,7 +132,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
         }
     }
 
-    async function getexcisting () {
+    async function getexcisting (cp) {
         $scope.updatePagePreloader_Submit = false
         $http({
             method: "POST",
@@ -140,15 +140,15 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
             data: {
                 "date": $scope.date
             }
-        }).then (await function (result){
+        }).then (function (result){
             if (result.data.status=="Null"){
                 $scope.absentees=undefined
             }
-            else if (result.data[$scope.cp]==undefined){
+            else if (result.data[cp]==undefined){
                 $scope.absentees=undefined
             }
             else{
-                $scope.absentees=result.data[$scope.cp]
+                $scope.absentees=result.data[cp]
             }
             $scope.updatePagePreloader_Submit = true
         })
@@ -156,7 +156,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
 
     $scope.changeperiod = (num) => {
         $scope.cp = num
-        getexcisting()
+        getexcisting($scope.cp)
     }
 
     $scope.gotohome = () => {
