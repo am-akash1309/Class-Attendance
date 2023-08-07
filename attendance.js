@@ -67,7 +67,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
         }
     }
 
-    async function assignCpBasedOnTime () {
+    $scope.assignCpBasedOnTime = () => {
         
         // Get the current time
         var currentTime = new Date();
@@ -81,23 +81,23 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
             
         // Assign cp based on the time range
         if (timeInDecimal >= 8.45 && timeInDecimal < 9.35) {
-           $scope.cp = 1;
+           $scope.changeperiod(1)
         } else if (timeInDecimal >= 9.35 && timeInDecimal < 10.45) {
-           $scope.cp = 2;
+           $scope.changeperiod(2)
         } else if (timeInDecimal >= 10.45 && timeInDecimal < 11.35) {
-           $scope.cp = 3;
+           $scope.changeperiod(3)
         } else if (timeInDecimal >= 11.35 && timeInDecimal < 13.10) {
-           $scope.cp = 4;
+           $scope.changeperiod(4)
         } else if (timeInDecimal >= 13.10 && timeInDecimal < 14.00) {
-           $scope.cp = 5;
+           $scope.changeperiod(5)
         } else if (timeInDecimal >= 14.00 && timeInDecimal < 15.00) {
-           $scope.cp = 6;
+           $scope.changeperiod(6)
         } else if (timeInDecimal >= 15.00 && timeInDecimal < 15.50) {
-           $scope.cp = 7;
+           $scope.changeperiod(7)
         } else if (timeInDecimal >= 15.50 && timeInDecimal < 16.40) {
-           $scope.cp = 8;
+           $scope.changeperiod(8)
         } else if ((timeInDecimal >= 0 && timeInDecimal < 8.45) || (timeInDecimal >= 16.40 && timeInDecimal <= 23.59)) {
-           $scope.cp = 8;
+           $scope.changeperiod(8)
         }
     }
       
@@ -156,11 +156,6 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
 
     $scope.changeperiod = (num) => {
         $scope.cp = num
-        getexcisting()
-    }
-
-    $scope.init = () => {
-        assignCpBasedOnTime()
         getexcisting()
     }
 
