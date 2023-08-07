@@ -67,7 +67,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
         }
     }
 
-    $scope.assignCpBasedOnTime = () => {
+    async function assignCpBasedOnTime () {
         
         // Get the current time
         var currentTime = new Date();
@@ -99,7 +99,6 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
         } else if ((timeInDecimal >= 0 && timeInDecimal < 8.45) || (timeInDecimal >= 16.40 && timeInDecimal <= 23.59)) {
            $scope.cp = 8;
         }
-        $scope.getexcisting()
     }
       
     $scope.submit = () => {
@@ -133,7 +132,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
         }
     }
 
-    $scope.getexcisting = () => {
+    async function getexcisting () {
         $scope.updatePagePreloader_Submit = false
         $http({
             method: "POST",
@@ -157,7 +156,12 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
 
     $scope.changeperiod = (num) => {
         $scope.cp = num
-        $scope.getexcisting()
+        await getexcisting()
+    }
+
+    $scope.init = () => {
+        await assignCpBasedOnTime()
+        await getexcisting()
     }
 
     $scope.gotohome = () => {
