@@ -140,7 +140,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
             data: {
                 "date": $scope.date
             }
-        }).then (function (result){
+        }).then (await function (result){
             if (result.data.status=="Null"){
                 $scope.absentees=undefined
             }
