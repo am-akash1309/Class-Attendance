@@ -68,6 +68,7 @@ myapp.controller("bot3", function($scope, $state, $http, $document){
     }
 
     $scope.assignCpBasedOnTime = () => {
+        
         // Get the current time
         var currentTime = new Date();
             
