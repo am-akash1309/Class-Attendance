@@ -1,0 +1,174 @@
+.footer-content{
+    text-align: center;
+    font-size: small;
+}
+.footer-bottom{
+    text-align: center;
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+    font-size: small;
+    font-family: 'Alegreya SC', serif;
+}
+.footer-content .logoMe{
+    color: dodgerblue;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Merienda', cursive;
+}
+.meHeart {
+    /* font-variation-settings: 'FILL' 1, 'wght' 100, 'GRAD' 0, 'opsz' 48 !important; */
+    vertical-align: bottom !important;
+}
+.meHeart.pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+      font-variation-settings: 'FILL' 1, 'wght' 100;
+    }
+    50% {
+      font-variation-settings: 'FILL' 1, 'wght' 600;
+    }
+    100% {
+      font-variation-settings: 'FILL' 1, 'wght' 100;
+    }
+}
+
+input{
+  border: none !important;
+  height: 18px !important;
+  color: #4c0d86;
+  font-weight: bolder !important;
+  font-size: x-large !important;
+  height: auto !important;
+}
+input:focus{
+  box-shadow: none !important;
+}
+input .datepicker{
+  height: auto !important;
+  padding-inline-start: unset !important;
+}
+.datepicker-controls .select-wrapper input {
+  padding-top: 7px;
+  padding-left: 0px !important;
+  font-size: unset !important;
+}
+.datepicker-controls{
+  margin-top: 15px;
+}
+.datepicker-controls .select-month input {
+  width: 90px;
+}
+.datepicker-date-display{
+  background-color: #4c0d86;
+}
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done{
+  color: #4c0d86;
+}
+.datepicker-table td.is-today{
+  color: #4c0d86;
+}
+.datepicker-table td.is-selected{
+  background-color: #4c0d86 !important;
+  color: white;
+}
+
+.btn{
+  background-color: crimson;
+  color: #bea4d6;
+  font-weight: bolder;
+  border-radius: 5px;
+  font-family: 'Sriracha', cursive;
+}
+.btn:hover{
+  background-color: rgb(240, 58, 95);
+  color: #4c0d86;
+  font-weight: bolder;
+}
+
+/* Update Page */
+.up_card{
+  border-radius: 8px;
+  margin-top: 5vw;
+  padding: 10px 10px 10px 10px;
+  background-color: #bea4d6;
+}
+.up_date{
+  font-family: 'Merienda';
+}
+.up_period_disp{
+  text-align: center;
+  font-family: 'Literata', serif;
+  font-size: larger;
+  color: crimson;
+  padding-bottom: 35px;
+}
+.up_abs_span{
+  color: crimson;
+  font-family: 'Literata', serif;
+  text-align: left;
+  margin-top: 20px;
+}
+.up_input_ads{
+  font-family: 'Lato', sans-serif;
+  border: 1px solid crimson !important;
+  border-radius: 8px !important;
+  height: 40px !important;
+  padding-inline-start: 6px !important;
+  padding-inline-end: 6px !important;
+  margin-top: 5px !important;
+  margin-bottom: 25px !important;
+  width: 96% !important;
+}
+.up_submit{
+  text-align: center !important;
+  padding-top: 15px;
+}
+.up_preloader_row{
+  padding-top: 6vw;
+  padding-bottom: 3vw;
+}
+.dropdown-content{
+  background-color: #bea4d6;
+  font-weight: bolder !important;
+  border-radius: 5px;
+}
+.dropdown-content li>a, .dropdown-content li>span{
+  color: #4c0d86 !important;
+}
+
+/* Home Page */
+.home_upbtn_row{
+  padding-top: 20px;
+}
+.home_date{
+  font-family: 'Merienda';
+  color: #4c0d86;
+  font-weight: bolder !important;
+}
+.table_head{
+  font-family: 'Literata', serif;
+  color: crimson;
+  font-weight: bolder !important;
+}
+.table_period{
+  font-family: 'Literata', serif;
+  color: crimson;
+}
+.table_abs{
+  font-family: 'Lato', sans-serif;
+  color: #4c0d86 !important;
+}
+.progress{
+  background-color: transparent !important;
+}
+.progress .indeterminate:before, .progress .indeterminate:after {
+  background: #4c0d86;
+  border-radius: 6px;
+}
+.table_abs_num{
+  font-family: 'Literata', serif;
+  color: crimson;
+  text-align: center;
+}

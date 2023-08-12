@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row center home_upbtn_row">
+      <a class="btn" ng-click="gotoHome()">Home</a>
+    </div>
+    <div class="row" ng-repeat="od in odes" ng-show="homePagePreloder">
+      <div class="col s12 m10 l8 offset-m1 offset-l2">
+        <div class="card up_card">
+          <div class="card-content">
+            <span class="card-title center home_date">{{od.date}}</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th class="table_head">Period</th>
+                  <th class="table_head">Roll Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table_period">1</td>
+                  <td class="table_abs">{{od.hasOwnProperty('1') ? od['1'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">2</td>
+                  <td class="table_abs">{{od.hasOwnProperty('2') ? od['2'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">3</td>
+                  <td class="table_abs">{{od.hasOwnProperty('3') ? od['3'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">4</td>
+                  <td class="table_abs">{{od.hasOwnProperty('4') ? od['4'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">5</td>
+                  <td class="table_abs">{{od.hasOwnProperty('5') ? od['5'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">6</td>
+                  <td class="table_abs">{{od.hasOwnProperty('6') ? od['6'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">7</td>
+                  <td class="table_abs">{{od.hasOwnProperty('7') ? od['7'].join(', ') : 'No Data'}}</td>
+                </tr>
+                <tr>
+                  <td class="table_period">8</td>
+                  <td class="table_abs">{{od.hasOwnProperty('8') ? od['8'].join(', ') : 'No Data'}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="progress" ng-hide="homePagePreloder">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+  </div>
